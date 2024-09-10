@@ -52,7 +52,8 @@
     // example usage: createCollectable(type, x, y, gravity, bounce)
 
        createCollectable("database",1260, 25, 0, 0)
-
+       createCollectable("database",1260, 400, 0, 0)
+       createCollectable("database",1260, 200, 0, 0)
     
     // TODO 3
     // Create cannons
@@ -61,8 +62,8 @@
     // example usage: createCannon(side, position, delay, width, height)
 
      createCannon("right",230,1000)
-     createCannon("top",500, 1200)
-    
+     createCannon("top", 500, 1200)
+     createCannon("top", 700, 1200)
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
