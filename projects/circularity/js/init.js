@@ -86,7 +86,7 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            we eliminate the function call so as not to repeat the same function and only use a loop
+           // we eliminate the function call so as not to repeat the same function and only use a loop
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
