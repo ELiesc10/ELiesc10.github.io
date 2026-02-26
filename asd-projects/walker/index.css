@@ -1,21 +1,23 @@
 
 body {
-  background-color: darkgreen;
+  background-color: rgb(0, 18, 91);
 }
 
 #board {
   width: 440px;
   height: 440px;
-  border: 1px solid white;
-  background-color: black;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(247, 247, 247);
   position: relative;
-}
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSenVgTeE-mnoneBGViiakcAErlepuYZW566g&s);
 
-#gameItem {
-  background-color: teal;
-  width: 50px;
-  height: 50px;
+#walker {
+  background-color: rgb(4, 122, 135);
+  width: 35px;
+  height: 35px;
   position: absolute;
+  border-radius: 50%
+
 /*   left: 100px; */  /* Uncomment if you want to set a "starting" position */
 /*   top: 100px;  */  /* Uncomment if you want to set a "starting" position */
 }
