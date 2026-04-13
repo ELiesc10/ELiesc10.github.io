@@ -14,7 +14,7 @@ var score = 0; // variable to keep track of the score
 var started = false; // variable to keep track of whether the game has started
 
 // TODO 4, Part 1: Create the apple variable
-var apple = {};
+const apple = {};
 
 // TODO 5, Part 1: Create the snake variable
 const snake = {};
@@ -55,7 +55,7 @@ makeSnakeSquare(10, 8);
 snake.head = snake.body[0];
   
   // TODO 4, Part 3: initialize the apple
-makeApple()
+makeApple();
 
   // TODO 6, Part 1: Initialize the interval
 updateInterval = setInterval(update, 100);
@@ -178,7 +178,8 @@ function hasHitWall() {
     board, false otherwise.
     
     HINT: What will the row and column of the snake's head be if this were the case?
-  */ if (snake.head.row < 0){
+  */ 
+ if (snake.head.row < 0){
     return true;
   }
   else if (snake.head.row > ROWS){
@@ -331,7 +332,7 @@ snake.tail = snakeSquare;
 */
 function handleKeyDown(event) {
   // TODO 7: make the handleKeyDown function register which key is pressed
- 
+ activeKey = event.which;
 
   // If a valid direction key is pressed, start the game
   if (
@@ -370,7 +371,7 @@ function getRandomAvailablePosition() {
     randomPosition.column = Math.floor(Math.random() * COLUMNS);
     randomPosition.row = Math.floor(Math.random() * ROWS);
     spaceIsAvailable = true;
-
+  }
     /*
       TODO 14: After generating the random position determine if that position is
       not occupied by a snakeSquare in the snake's body. If it is then set 
@@ -378,17 +379,14 @@ function getRandomAvailablePosition() {
     */
 for (var i = 0; i < snake.body.length; i++){
   var piece = snake.body[i];
-  if (piece.column === randomPosition.column && piece.row === randomPosition){
-    spacelsAvailable = false;
-  }
+  if (piece.column === randomPosition.column && piece.row === randomPosition.row){
+    spaceIsAvailable = false;
 }
-
-
- 
+}
+}
 
   return randomPosition;
 }
-
 function calculateHighScore() {
   // retrieve the high score from session storage if it exists, or set it to 0
   var highScore = sessionStorage.getItem("highScore") || 0;
